@@ -13,7 +13,7 @@ That is the reason why concurrent approaches become so popular - it is easy to m
 <img src="images/conv.jpg">
 
 ## Solutions
-So let us make a fast overview of the most popular approaches to run and accelerate CNN's on FPGA's
+So let us make a fast overview of the most popular approaches to run and accelerate inferring of CNN's on FPGA's
 
 ### OpenVINO
 Terasic boards are the most popular FPGA's in the world, so if somebody has ever worked with FPGA, most likely he deals with Intel Terasic's chips, such as Cyclone or Stratix. <br>
@@ -52,7 +52,7 @@ Neural Networks are very heavy - they can be a hundred megabytes. Not every embe
 ### Lifehacks how to make faster
 
 #### GEMM
-As it was mentioned before, the most expensive operation in the convolutional networks is the convolution. To accelerate the calculations, we can use GEMM - General Matrix Multiply. The `im2col` operation can be used to make this.  
+As it was mentioned before, the most expensive operation in the convolutional networks is the 2d convolution. To accelerate the calculations, we can use GEMM - General Matrix Multiply. The `im2col` operation can be used to make this.  
 <img src="images/im2col.png"><br>
 After the transformation of the kernels and input image, the convolution operation becomes simple matrixes multiplication, and after that, the repatch is required. There are many ways to accelerate matrixes multiplication.
 <img src="images/simd.png">
