@@ -14,6 +14,10 @@ That is the reason why concurrent approaches become so popular - it is easy to m
 CNN is trendy in Image and Video processing for recognition, classification and analysis problems. Also can be successfully used for time series analysis/predictions and natural language processing (1D conv). For example, when we need blur, emboss, sharpness or edge detection on the image, convolution can be used in all cases. [[Ref](https://en.wikipedia.org/wiki/Convolution)].
 <img src="images/conv.jpg">
 
+#### Why to use FPGA?
+- GPU is specified only for matrix multiplication, but FPGA can be used for much more approaches
+- TBD
+
 ## Solutions
 So let us make a fast overview of the most popular approaches to run and accelerate inferring of CNN's on FPGA's
 
@@ -47,11 +51,9 @@ As far as it is impossible to deploy unsupported layers, by replacing Instance n
 PYNQ - open-source project from Xilinx, that makes possible to use Python language and libraries to run it on Xilinx platforms [[Ref](http://www.pynq.io/)]. PYNQ is usually used for developers, who want to make a fast test of their solutions on FPGA without programming on C++. There are eight officially supported boards, but as far as PYNQ is open-sourced, there are much more unofficially supported boards, only by the community. All such boards use DPU,(Deep learning Processor Unit deployed on the FPGA) to process the code.<br>
 What is more - about CNN's - there are many examples of running CNN's on FPGA's ([for example here](https://github.com/awai54st/PYNQ-Classification)), but cannot even talk about acceleration - PYNQ is a very high-level approach, easy to use but tough to optimize. So let us look at low-level approaches.
 
-## Low-level approaches for CNN's acceleration
+## Approaches for Convolution layers acceleration
 Low-level programming is tightly connected with optimization and self-management of all resources - from memory to counting and reducing a real number of operations. <br>
 Neural Networks are very heavy - they can be a hundred megabytes. Not every embedded device, especially FPGA, can contain and run such networks, only the best of them. And for what? Embedded devices used to be low-power, high-performance and highly-optimized. So how to accelerate CNN's for FPGA's?
-
-### Lifehacks how to make faster
 
 #### GEMM
 As it was mentioned before, the most expensive operation in the convolutional networks is the 2d convolution. To accelerate the calculations, we can use GEMM - General Matrix Multiply. The `im2col` operation can be used to make this.  
@@ -116,6 +118,9 @@ this multiplier depends only on kernel, so it can be calculated once and be cach
 
 Details are well described in appendix A [here](https://www.mdpi.com/1999-4893/12/5/112/pdf) for Strassen algorithm, and [here](https://www.sciencedirect.com/science/article/pii/S0747717108800132?via%3Dihub) for Winograd "Matrix Multiplication via Arithmetic Progressions".
 
+### Summary
+
+`TBD`
 
 ## Sources
 - **MIT Technology Review**, February 24, 2020: "We're not prepared for the end of Moore's Law" by Devid Rotman, [[Ref](https://www.technologyreview.com/2020/02/24/905789/were-not-prepared-for-the-end-of-moores-law/)] <br>
