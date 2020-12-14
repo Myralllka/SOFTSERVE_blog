@@ -19,7 +19,7 @@ CNN is trendy in Image and Video processing for recognition, classification and 
 - Low latency
 - Long term support
 - Full customization in the usage time, can be reconfigure, when the better algorithm is proposed
-- Good for sollutions that are not anly about GEMM, but also use cache, pipes etc.
+- Good for sollutions that are not only about GEMM, but also use cache, pipes etc.
 
 ## Solutions
 So let us make a fast overview of the most popular approaches to run and accelerate inferring of CNN's on FPGA's
