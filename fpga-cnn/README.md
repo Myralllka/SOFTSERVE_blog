@@ -13,7 +13,7 @@ That is the reason why concurrent approaches become so popular - it is easy to m
 **CNN** - Convolutional Neural Network, also known as ConvNet. It is a class of Deep Neural Networks and consists of many building blocks (for example, normalisation, activation, pooling etc.), and the most expensive operation is convolution. <br>
 <img src="images/conv.jpg">
 **Convolution** is an operation on functions, that express, how one modifies the shape of another one. Convolution layers take about 85% of execution time and resources of all DNN.
-<img src="images/chart.png"> [[Ref](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-93.pdf)]
+<img src="images/chart.png"> [[Ref](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-93.pdf)]<br>
  It is a very complex operation that needs many multiplications. For example, if the input is RGB N\*M image, and kernel size is k\*k, the time complexity will be O(N\*M\*k\*k).
 
 CNN is trendy in Image and Video processing for recognition, classification and analysis problems. Also can be successfully used for time series analysis/predictions and natural language processing (1D Conv). For example, when we need blur, emboss, sharpness or edge detection on the image, convolution can be used in all cases [[Ref](https://en.wikipedia.org/wiki/Convolution)].
