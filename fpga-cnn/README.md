@@ -1,7 +1,9 @@
 # FPGA-based Convolutional Neural Network acceleration
 
-## Introduction
+## Abstract
+Convolution layers take about 85% of execution time and resources of all DNN, and the real-time processing becomes more and more important, it is necessary to find ways of the convolution acceleration. Using GPU is the most popular way to accelerate convolution, but it has flaws that are missing in FPGA and make it reasonable to research this topic. There are a few known frameworks to accelerate the CNN on the FPGA's, such as Vitis AI, OpenVINO etc. Moreover, now we live in a time of new hardware and algorithm solutions to this problem, that helps accelerate the convolution on the FPGA, for example, quantisation, optimisation, different algorithms as ABM-SpConv, Winograd, and usage of FPGA advantages, on-chip memory, reconfiguration and building pipelines in the hardware.
 
+## Introduction
 We leave in the century of fast changes when the flow of information is much bigger than we can process and analyse. That is the reason why real-time systems become more and more popular. Moor's law [[Ref](https://en.wikipedia.org/wiki/Moore%27s_law)] has not been working anymore since 2019: it is impossible to make smaller transistors because of physics laws, on such small sizes the Relative Theory stops working, that is time for Quantum theory and another kind of computers. <br>
 
 That is the reason why concurrent approaches become so popular - it is easy to make them horizontal-scalable. Multicore Processors, GPU's are very popular now, but they are not suitable for specific approaches. That is why we are working with FPGA's. Maybe it can be a better platform for CNN?
@@ -147,3 +149,4 @@ Details are well described in appendix A [here](https://www.mdpi.com/1999-4893/1
 - **Why GEMM is at the heart of deep learning**, April 2015, by Pete Warden. [[Ref](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)]
 - **Learning Semantic Image Representations at a Large
 Scale**, May 2014, by Yangqing Jia. [[Ref](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-93.pdf)]
+- **Can FPGAs Beat GPUs in Accelerating Next-Generation Deep Neural Networks?**, February 2017, by Dr. Eriko Nurvitadhi [[Ref](https://dl.acm.org/doi/10.1145/3020078.3021740)]
